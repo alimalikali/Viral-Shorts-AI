@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.mypy_cache/
+.pytest_cache/
+
+# Node/React
+node_modules/
+dist/
+dist-electron/
+build/
+.eslintcache
+*.local
+
+# run.sh service logs
+.run-logs/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Application Data / Media (IMPORTANT to avoid committing huge videos)
+backend/uploads/
+backend/outputs/
+backend/temp/
+*.mp4
+*.mov
+*.wav
+*.ass
+*.srt
+*.db
+*.sqlite3

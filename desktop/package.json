@@ -1,0 +1,43 @@
+{
+  "name": "viral-shorts-ai-desktop",
+  "version": "1.0.0",
+  "description": "Sleek desktop container wrapper for Viral Shorts AI dashboard",
+  "author": "Viral Shorts AI <noreply@localhost>",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder build"
+  },
+  "build": {
+    "appId": "com.viralshortsai.desktop",
+    "productName": "Viral Shorts AI",
+    "files": [
+      "main.js",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "AudioVideo"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ]
+    }
+  },
+  "devDependencies": {
+    "electron": "^29.1.0",
+    "electron-builder": "^24.13.3"
+  }
+}

@@ -1,0 +1,32 @@
+services:
+  # Python AI Pipeline Backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "${BACKEND_PORT:-8000}:8000"
+    volumes:
+      - ./backend/uploads:/workspace/uploads
+      - ./backend/outputs:/workspace/outputs
+      - ./backend/temp:/workspace/temp
+      - model-cache:/root/.cache/huggingface
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - DEVICE=cpu # Toggle to 'cuda' if running inside docker with nvidia-runtime
+    restart: always
+
+  # React Web Front-end Client
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "${FRONTEND_PORT:-3000}:80"
+    depends_on:
+      - backend
+    restart: always
+
+volumes:
+  model-cache:

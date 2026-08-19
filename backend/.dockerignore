@@ -1,0 +1,9 @@
+venv
+venv.*
+uploads
+outputs
+temp
+__pycache__
+**/__pycache__
+*.pyc
+package-lock.json
