@@ -124,8 +124,6 @@ To upload this complete software to your own GitHub account and get a shareable 
    # Push files
    git push -u origin main
    ```
-4. 🎉 **Done!** Your repository is now live on GitHub at `https://github.com/YOUR_GITHUB_USERNAME/viral-shorts-ai`.
-
 ---
 
 ## 📄 License
